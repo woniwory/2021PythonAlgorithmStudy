@@ -1,0 +1,15 @@
+n,k = map(int,input().split())
+type = []
+tmp = 0
+count = 0
+for i in range(n):
+    type.append(int(input()))
+type = sorted(type, reverse = True)
+
+
+for i in type:
+    count += k // i
+    k = k % i
+
+
+print(count)
