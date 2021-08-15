@@ -1,0 +1,13 @@
+
+n = int(input())
+result = 0
+tmp = 0
+data = list(map(int,input().split()))
+data = sorted(data)
+
+for i in range(n-1):
+    tmp += data[i]
+
+result = max(data) + tmp /2
+
+print(result)
