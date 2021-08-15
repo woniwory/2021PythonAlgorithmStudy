@@ -1,3 +1,4 @@
+#알바생 강호
 n = int(input())
 tmp= 0
 result = 0
