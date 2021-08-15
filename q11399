@@ -1,0 +1,12 @@
+n = int(input())
+t = list(map(int,input().split()))
+t = sorted(t)
+
+tmp = 0
+result = 0
+
+for i in range(n):
+    tmp += t[i]
+    result += tmp
+
+print(result)
