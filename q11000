@@ -1,0 +1,15 @@
+#시간초과
+
+n = int(input())
+count = n
+tmp = []
+for i in range(n):
+    data = list(map(int,input().split()))
+    tmp.append(data)
+
+
+for i in range(n):
+    for j in range(n):
+        if tmp[i][0] == tmp[j][1]:
+            count -= 1
+print(count)
