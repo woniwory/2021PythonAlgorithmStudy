@@ -1,3 +1,5 @@
+#별
+
 n = int(input())
 
 for i in range(4*n-3):
