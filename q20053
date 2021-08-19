@@ -1,0 +1,17 @@
+t = int(input())
+result = []
+
+for i in range(t):
+    result.append([])
+    n = int(input())
+    data = list(map(int, input().split()))
+    result[i].append(min(data))
+    result[i].append(max(data))
+
+
+for i in range(t):
+        print(result[i][0], result[i][1])
+
+
+
+
