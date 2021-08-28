@@ -1,0 +1,27 @@
+import sys
+count = -1
+def dfs(edge, v,visited):
+    global count
+    visited[v] = True
+    count+= 1
+
+    for g in edge:
+        if v in g:
+            for i in range(2):
+                if visited[g[i]] != True:
+                    dfs(edge, g[i], visited)
+
+N = int(input())
+M = int(input())
+
+edge = [[] for _ in range(M)]
+
+for i in range(M):
+    edge[i]=list(map(int, sys.stdin.readline().split()))
+
+edge = sorted(edge,key= lambda x:sorted([x[0],x[1]]))
+
+Visited = [False] * (N+1)
+dfs(edge,1,Visited)
+print(count)
+
